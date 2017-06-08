@@ -4,13 +4,19 @@ using UnityEngine;
 
 public class Move : MonoBehaviour {
 
-	// Use this for initialization
 	void Start () {
 		
 	}
 	
-	// Update is called once per frame
 	void Update () {
-        transform.Translate(100, 0, 0);
+        transform.Translate(8f * Time.deltaTime, 0, 0);
 	}
+
+    /// <summary>
+    /// Destruindo objeto quando sai do foco da camera
+    /// </summary>
+    private void OnBecameInvisible()
+    {
+        DestroyObject(this.gameObject);
+    }
 }
