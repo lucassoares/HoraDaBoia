@@ -25,16 +25,19 @@ public class BottomMenuScript : MonoBehaviour {
     public void firstArrowClick()
     {
         Instantiate(personagemEscolhido, spawn1.transform.position, spawn1.transform.rotation);
+		leftMenu.enabled = false;
     }
 
     public void secondArrowClick()
     {
         Instantiate(personagemEscolhido, spawn2.transform.position, spawn2.transform.rotation);
+		leftMenu.enabled = false;
     }
 
     public void thirdArrowClick()
     {
         Instantiate(personagemEscolhido, spawn3.transform.position, spawn3.transform.rotation);
+		leftMenu.enabled = false;
     }
 
     public void clickCenoura()
