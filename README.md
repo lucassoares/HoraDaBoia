@@ -1,9 +1,9 @@
 # Hora Da Boia
-Game sobre alimentação, desenvolvido na disciplina de PJD.
+O fast food, atualmente, é o maior inimigo da saúde das crianças, e somente uma alimentação baseada em legumes pode salvar os pequeninos da obesidade infantil, use nossos aliados para impedir que o fast food entre nos lares familiares!
 
 ## Sobre o jogo
 
-<h2> Grupo</h2>
+<h2> Grupo LittleBricksStudio</h2>
 
 - Lucas Soares
 
