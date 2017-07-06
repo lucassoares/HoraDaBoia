@@ -2,15 +2,28 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemySpawn : MonoBehaviour {
+public class EnemySpawn : MonoBehaviour
+{
+    public GameObject[] enemy;
+    public GameObject[] spawnEnemy;
 
-	// Use this for initialization
-	void Start () {
-		
+    private float time;
+
+	void Start ()
+    {
+        time = 0;
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+
+	void Update ()
+    {
+        time = time + 1 * Time.deltaTime;
+
+        if(time > 3)
+        {
+            int spawnPos = Random.Range(0, spawnEnemy.Length);
+            int enemySpawn = Random.Range(0, enemy.Length);
+
+            Instantiate(enemy[enemySpawn])
+        }
 	}
 }
