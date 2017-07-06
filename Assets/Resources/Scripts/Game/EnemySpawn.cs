@@ -23,7 +23,8 @@ public class EnemySpawn : MonoBehaviour
             int spawnPos = Random.Range(0, spawnEnemy.Length);
             int enemySpawn = Random.Range(0, enemy.Length);
 
-            Instantiate(enemy[enemySpawn])
+            Instantiate(enemy[enemySpawn], spawnEnemy[spawnPos].transform.position, spawnEnemy[spawnPos].transform.rotation);
+            time = 0;
         }
 	}
 }

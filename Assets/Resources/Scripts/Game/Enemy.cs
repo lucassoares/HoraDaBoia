@@ -8,7 +8,7 @@ public class Enemy : MonoBehaviour
 
     void Start ()
     {
-        speed = 0;
+        speed = -5;
     }
 	
 	void Update ()
@@ -16,11 +16,19 @@ public class Enemy : MonoBehaviour
         transform.Translate(speed * Time.deltaTime, 0, 0);
     }
 
-    /// <summary>
-    /// Destruindo objeto quando sai do foco da camera
-    /// </summary>
+
     private void OnBecameInvisible()
     {
         DestroyObject(this.gameObject);
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            speed = 0;
+        }
+    }
+
+
 }
