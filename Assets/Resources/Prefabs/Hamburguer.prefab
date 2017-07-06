@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 58722358541707350}
   - component: {fileID: 50093587366241230}
   - component: {fileID: 114178090855728596}
+  - component: {fileID: 95758950492908998}
   m_Layer: 0
   m_Name: Hamburguer
   m_TagString: Enemy
@@ -77,6 +78,23 @@ CircleCollider2D:
   m_Offset: {x: 0.17, y: 1.4}
   serializedVersion: 2
   m_Radius: 5.83
+--- !u!95 &95758950492908998
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1593616178657124}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 68142dd8026331e42a3eb175f190dc3e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114178090855728596
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -119,7 +137,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 06428d131030c7748bf28bf61ade154b, type: 3}
+  m_Sprite: {fileID: 21300006, guid: 77db2327990375544ba58f3a3a1ea326, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
