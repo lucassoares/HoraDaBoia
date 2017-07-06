@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
 
-public class BottomMenuScript : MonoBehaviour {
+public class BottomMenuScript : MonoBehaviour
+{
     public Canvas leftMenu;
+
     public GameObject spawn1;
     public GameObject spawn2;
     public GameObject spawn3;
@@ -22,42 +24,79 @@ public class BottomMenuScript : MonoBehaviour {
 	
 	void Update (){}
 
+    /// <summary>
+    /// Metodo de clique primeira seta
+    /// </summary>
     public void firstArrowClick()
     {
-        Instantiate(personagemEscolhido, spawn1.transform.position, spawn1.transform.rotation);
-		leftMenu.enabled = false;
+        InstantiateObject(spawn1);
     }
 
+    /// <summary>
+    /// Metodo de clique segunda seta
+    /// </summary>
     public void secondArrowClick()
     {
-        Instantiate(personagemEscolhido, spawn2.transform.position, spawn2.transform.rotation);
-		leftMenu.enabled = false;
+        InstantiateObject(spawn2);
     }
 
+    /// <summary>
+    /// Metodo de clique terceira seta
+    /// </summary>
     public void thirdArrowClick()
     {
-        Instantiate(personagemEscolhido, spawn3.transform.position, spawn3.transform.rotation);
-		leftMenu.enabled = false;
+        InstantiateObject(spawn3);
     }
 
+    /// <summary>
+    /// Metodo de clique na cenoura
+    /// </summary>
     public void clickCenoura()
     {
-        leftMenu.enabled = true;
-        personagemEscolhido = cenoura;
+        ClickBottomMenu(cenoura);
     }
+
+    /// <summary>
+    /// Metodo de clique na abobora
+    /// </summary>
     public void clickAbobora()
     {
-        leftMenu.enabled = true;
-        personagemEscolhido = abobora;
+        ClickBottomMenu(abobora);
     }
+
+    /// <summary>
+    /// Metodo de clique no brocolis
+    /// </summary>
     public void clickBrocolis()
     {
-        leftMenu.enabled = true;
-        personagemEscolhido = brocolis;
+        ClickBottomMenu(brocolis);
     }
+
+    /// <summary>
+    /// Metodo de clique no tomate
+    /// </summary>
     public void clickTomate()
     {
+        ClickBottomMenu(tomate);
+    }
+
+    /// <summary>
+    /// Metodo para instanciar objeto na posição do menu
+    /// </summary>
+    /// <param name="position">Recebe a posição do spawn</param>
+    private void InstantiateObject(GameObject position)
+    {
+        Instantiate(personagemEscolhido, position.transform.position, position.transform.rotation);
+        leftMenu.enabled = false;
+    }
+    
+    /// <summary>
+    /// Metodo de escolha de personagem para instanciar
+    /// </summary>
+    /// <param name="personagem">Personagem do selecionado no menu</param>
+    private void ClickBottomMenu(GameObject personagem)
+    {
         leftMenu.enabled = true;
-        personagemEscolhido = tomate;
+        personagemEscolhido = personagem;
     }
 }
