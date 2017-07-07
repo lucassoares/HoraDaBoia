@@ -17,12 +17,18 @@ public class BottomMenuScript : MonoBehaviour
     public GameObject brocolis;
 
     private GameObject personagemEscolhido;
-   
-	void Start (){
+
+    private Players player = new Players();
+
+	void Start ()
+    {
         leftMenu.enabled = false;
 	}
 	
-	void Update (){}
+	void Update ()
+    {
+        
+    }
 
     /// <summary>
     /// Metodo de clique primeira seta
@@ -61,7 +67,15 @@ public class BottomMenuScript : MonoBehaviour
     /// </summary>
     public void clickAbobora()
     {
-        ClickBottomMenu(abobora);
+        if(Players.manas >= 5)
+        {
+            ClickBottomMenu(abobora);
+            Players.manas -= 5;
+        }
+        else
+        {
+            Debug.Log("Você ainda não pode utilizar este personagem");
+        }
     }
 
     /// <summary>
