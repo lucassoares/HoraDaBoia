@@ -34,7 +34,8 @@ public class Enemy : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             speed = 0;
-            Abobora.colidiu = true;
+            collision.gameObject.GetComponent<Legumes>().colidiu = true;
+            collision.gameObject.GetComponent<Legumes>().tirarVida++; 
         }
     }
 }

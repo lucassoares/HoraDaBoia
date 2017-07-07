@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 114029462431178010}
   - component: {fileID: 61168925927395566}
   - component: {fileID: 50504736764022108}
+  - component: {fileID: 114952151465473582}
   m_Layer: 0
   m_Name: Hotdog_Player
   m_TagString: Enemy
@@ -104,9 +105,20 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
+  m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!95 &95273242666768174
 Animator:
   serializedVersion: 3
@@ -135,6 +147,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56bf0caee74ba5a438396395d9f84cc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114952151465473582
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1224691153273302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dfe127cc36fa1b4a9711bb31c166c3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colidiu: 0
 --- !u!212 &212236786609189312
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -165,8 +189,13 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300012, guid: 77db2327990375544ba58f3a3a1ea326, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0

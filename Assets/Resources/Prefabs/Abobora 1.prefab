@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 58822534094262812}
   - component: {fileID: 114576754424994624}
   - component: {fileID: 114733847225176704}
+  - component: {fileID: 114879702095396628}
   m_Layer: 0
   m_Name: Abobora 1
   m_TagString: Player
@@ -119,6 +120,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 625377c72648c4846a39b4fc4b365c93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  colidiu: 0
+--- !u!114 &114879702095396628
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1989703635273218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10ef256e1d8af2d4c99a8c304001e8fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colidiu: 0
+  tirarVida: 0
 --- !u!212 &212857795014072564
 SpriteRenderer:
   m_ObjectHideFlags: 1

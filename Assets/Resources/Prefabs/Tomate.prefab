@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 61521621159796902}
   - component: {fileID: 114010962931699236}
   - component: {fileID: 95930665542231256}
+  - component: {fileID: 114188918611604970}
   m_Layer: 0
   m_Name: Tomate
   m_TagString: Player
@@ -75,9 +76,20 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
+  m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 9.219999, y: 13.2300005}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 9.12, y: 8.32}
+  m_EdgeRadius: 0
 --- !u!95 &95930665542231256
 Animator:
   serializedVersion: 3
@@ -106,6 +118,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66f38de511478a64fbc3dc1c01fc9b84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114188918611604970
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1966690481403246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10ef256e1d8af2d4c99a8c304001e8fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colidiu: 0
+  tirarVida: 0
 --- !u!212 &212254432596219436
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -136,8 +161,13 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300008, guid: 4671f8466d28b5343898d4cdea1f0f37, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0

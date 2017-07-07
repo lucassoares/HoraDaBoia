@@ -2,19 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Abobora : MonoBehaviour
+public class HotDog : MonoBehaviour
 {
     private int vida;
     public bool colidiu;
     private float time;
 
-    void Start ()
+	void Start ()
     {
-        vida = 15;
+        vida = 10;
         colidiu = false;
         time = 0;
 	}
-	
+
 	void Update ()
     {
         if (colidiu)
@@ -23,19 +23,14 @@ public class Abobora : MonoBehaviour
             if(time > 1)
             {
                 time = 0;
-                vida--;
+                vida-=2;
             }
-        }
-
-        if(vida == 0)
-        {
-            DestroyObject(this.gameObject);
-            Debug.Log("Morreu");
+            if(vida == 0)
+            {
+                DestroyObject(this.gameObject);
+                Debug.Log("Hot Dog morreu");
+            }
+            Debug.Log("Vida do hot dog: " + vida + colidiu);
         }
 	}
-
-    private void OnCollisionEnter2D(Collision2D coll)
-    {
-        
-    }
 }
