@@ -27,7 +27,7 @@ public class Legumes : MonoBehaviour
                 vida -= tirarVida;
                 time = 0;
             }
-            if(vida == 0)
+            if(vida <= 0)
             {
                 DestroyObject(this.gameObject);
                 Debug.Log("Legume morreu");
