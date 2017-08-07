@@ -22,7 +22,15 @@ public class Enemy : MonoBehaviour
     /// </summary>
      void OnBecameInvisible()
     {
-        Players.vida -= 3;
+        int vidaPlayer = Players.vida;
+        if(vidaPlayer > 0)
+        {
+            Players.vida -= 1;
+        }
+        else
+        {
+            Debug.Log("Morreu");
+        }
         Debug.Log(Players.vida);
         DestroyObject(this.gameObject);
     }
@@ -31,17 +39,20 @@ public class Enemy : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
+            Debug.Log("Colidiu");
             speed = 0;
             collision.gameObject.GetComponent<Legumes>().colidiu = true;
             collision.gameObject.GetComponent<Legumes>().tirarVida++;
         }
+
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
       if(collision.gameObject.tag == "Player")
         {
-            speed = -5;
+            speed = -3;
+            Debug.Log("SAIU DA COLISAO");
         }
     }
 }

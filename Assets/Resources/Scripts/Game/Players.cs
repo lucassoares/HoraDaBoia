@@ -7,12 +7,14 @@ public class Players : MonoBehaviour
 {
     public static int manas;
     public static int vida;
+    public static int pontos;
     private float time;
     public Text manasText;
     public Text pontosText;
 
     void Start ()
     {
+        pontos = 0;
         manas = 0;
         time = 0;
         vida = 15;

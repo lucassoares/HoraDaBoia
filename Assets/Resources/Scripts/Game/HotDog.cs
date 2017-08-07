@@ -27,10 +27,11 @@ public class HotDog : MonoBehaviour
             }
             if(vida == 0)
             {
+                Players.pontos += 5;
                 DestroyObject(this.gameObject);
-                Debug.Log("Hot Dog morreu");
+               // Debug.Log("Hot Dog morreu");
             }
-            Debug.Log("Vida do hot dog: " + vida + colidiu);
+            //Debug.Log("Vida do hot dog: " + vida + colidiu);
         }
 	}
 }

@@ -27,10 +27,10 @@ public class Abobora : MonoBehaviour
             }
         }
 
-        if(vida == 0)
+        if(vida <= 0)
         {
             DestroyObject(this.gameObject);
-            Debug.Log("Morreu");
+           // Debug.Log("Morreu");
         }
 	}
 
