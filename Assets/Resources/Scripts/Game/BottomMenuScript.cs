@@ -59,7 +59,15 @@ public class BottomMenuScript : MonoBehaviour
     /// </summary>
     public void clickCenoura()
     {
-        ClickBottomMenu(cenoura);
+        if (Players.manas >= 5)
+        {
+            ClickBottomMenu(cenoura);
+            Players.manas -= 5;
+        }
+        else
+        {
+            Debug.Log("Você ainda não pode utilizar este personagem");
+        }
     }
 
     /// <summary>
@@ -67,10 +75,10 @@ public class BottomMenuScript : MonoBehaviour
     /// </summary>
     public void clickAbobora()
     {
-        if(Players.manas >= 5)
+        if(Players.manas >= 10)
         {
             ClickBottomMenu(abobora);
-            Players.manas -= 5;
+            Players.manas -= 10;
         }
         else
         {
@@ -83,7 +91,15 @@ public class BottomMenuScript : MonoBehaviour
     /// </summary>
     public void clickBrocolis()
     {
-        ClickBottomMenu(brocolis);
+        if (Players.manas >= 5)
+        {
+            ClickBottomMenu(brocolis);
+            Players.manas -= 5;
+        }
+        else
+        {
+            Debug.Log("Você ainda não pode utilizar este personagem");
+        }
     }
 
     /// <summary>

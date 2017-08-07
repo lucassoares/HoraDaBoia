@@ -8,7 +8,7 @@ public class Move : MonoBehaviour
 
 	void Start ()
     {
-        speed = 8;
+        speed = 3;
 	}
 	
 	void Update ()
@@ -24,17 +24,6 @@ public class Move : MonoBehaviour
         DestroyObject(this.gameObject);
     }
 
-    ///// <summary>
-    ///// Método de colisão com objeto, utilizando para colidir com inimigo
-    ///// </summary>
-    ///// <param name="collision">Objeto que colide</param>
-    //private void OnCollisionEnter2D(Collision2D collision)
-    //{
-    //   if(collision.gameObject.tag == "Enemy")
-    //    {
-    //        speed = 0;
-    //    }
-    //}
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

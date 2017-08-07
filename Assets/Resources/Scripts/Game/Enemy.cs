@@ -9,7 +9,7 @@ public class Enemy : MonoBehaviour
 
     void Start ()
     {
-        speed = -5;
+        speed = -3;
     }
 	
 	void Update ()
@@ -18,22 +18,15 @@ public class Enemy : MonoBehaviour
     }
 
     /// <summary>
-    /// Método para destruir objetos quando saem da tela
+    /// Método quando saem da tela
     /// </summary>
-    private void OnBecameInvisible()
+     void OnBecameInvisible()
     {
+        Players.vida -= 3;
+        Debug.Log(Players.vida);
         DestroyObject(this.gameObject);
     }
-
-    ///// <summary>
-    ///// Método para detectar colisões
-    ///// </summary>
-    ///// <param name="collision"></param>
-    //private void OnTriggerEnter2D(Collision2D collision)
-    //{
-        
-    //}
-
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
