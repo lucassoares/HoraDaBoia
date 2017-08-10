@@ -6,7 +6,6 @@ public class EnemySpawn : MonoBehaviour
 {
     public GameObject[] enemy;
     public GameObject[] spawnEnemy;
-
     private float time;
 
 	void Start ()
@@ -17,12 +16,10 @@ public class EnemySpawn : MonoBehaviour
 	void Update ()
     {
         time = time + 1 * Time.deltaTime;
-
         if(time > 3)
         {
             int spawnPos = Random.Range(0, spawnEnemy.Length);
             int enemySpawn = Random.Range(0, enemy.Length);
-
             Instantiate(enemy[enemySpawn], spawnEnemy[spawnPos].transform.position, spawnEnemy[spawnPos].transform.rotation);
             time = 0;
         }

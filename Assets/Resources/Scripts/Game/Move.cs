@@ -24,6 +24,10 @@ public class Move : MonoBehaviour
         DestroyObject(this.gameObject);
     }
 
+    /// <summary>
+    /// Método de entrar na colisão
+    /// </summary>
+    /// <param name="collision">Objeto de colisão</param>
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.tag == "Enemy")

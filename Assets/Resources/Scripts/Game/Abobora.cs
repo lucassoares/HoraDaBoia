@@ -26,16 +26,9 @@ public class Abobora : MonoBehaviour
                 vida--;
             }
         }
-
         if(vida <= 0)
         {
             DestroyObject(this.gameObject);
-           // Debug.Log("Morreu");
         }
 	}
-
-    private void OnCollisionEnter2D(Collision2D coll)
-    {
-        
-    }
 }

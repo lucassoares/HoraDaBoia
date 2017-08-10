@@ -16,6 +16,10 @@ public class BottomMenuScript : MonoBehaviour
     public GameObject tomate;
     public GameObject brocolis;
 
+    public Image aboboraInferior;
+    public Image cenouraInferior;
+    public Image brocolisInferior;
+
     private GameObject personagemEscolhido;
 
     private Players player = new Players();
@@ -27,7 +31,25 @@ public class BottomMenuScript : MonoBehaviour
 	
 	void Update ()
     {
-        
+        if(Players.manas <= 10)
+        {
+            aboboraInferior.GetComponent<Button>().interactable = false;
+        }
+        else
+        {
+            aboboraInferior.GetComponent<Button>().interactable = true;
+        }
+
+        if(Players.manas <= 5)
+        {
+            brocolisInferior.GetComponent<Button>().interactable = false;
+            cenouraInferior.GetComponent<Button>().interactable = false;
+        }
+        else
+        {
+            brocolisInferior.GetComponent<Button>().interactable = true;
+            cenouraInferior.GetComponent<Button>().interactable = true;
+        }
     }
 
     /// <summary>
@@ -64,10 +86,6 @@ public class BottomMenuScript : MonoBehaviour
             ClickBottomMenu(cenoura);
             Players.manas -= 5;
         }
-        else
-        {
-            Debug.Log("Você ainda não pode utilizar este personagem");
-        }
     }
 
     /// <summary>
@@ -80,10 +98,6 @@ public class BottomMenuScript : MonoBehaviour
             ClickBottomMenu(abobora);
             Players.manas -= 10;
         }
-        else
-        {
-            Debug.Log("Você ainda não pode utilizar este personagem");
-        }
     }
 
     /// <summary>
@@ -95,10 +109,6 @@ public class BottomMenuScript : MonoBehaviour
         {
             ClickBottomMenu(brocolis);
             Players.manas -= 5;
-        }
-        else
-        {
-            Debug.Log("Você ainda não pode utilizar este personagem");
         }
     }
 

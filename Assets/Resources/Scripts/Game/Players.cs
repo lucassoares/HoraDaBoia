@@ -23,14 +23,12 @@ public class Players : MonoBehaviour
 	void Update ()
     {
         time = time + 1 * Time.deltaTime;
-
         if(time >= 1)
         {
             manas++;
+            pontosText.text = vida.ToString();
             time = 0;
         }
-
         manasText.text = manas.ToString();
-        pontosText.text = vida.ToString();
     }
 }
