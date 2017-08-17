@@ -11,6 +11,8 @@ public class BottomMenuScript : MonoBehaviour
     public GameObject spawn2;
     public GameObject spawn3;
 
+    public Canvas pauseMenu;
+
     public GameObject cenoura;
     public GameObject abobora;
     public GameObject tomate;
@@ -27,7 +29,8 @@ public class BottomMenuScript : MonoBehaviour
 	void Start ()
     {
         leftMenu.enabled = false;
-	}
+        pauseMenu.enabled = false;
+    }
 	
 	void Update ()
     {
@@ -138,5 +141,10 @@ public class BottomMenuScript : MonoBehaviour
     {
         leftMenu.enabled = true;
         personagemEscolhido = personagem;
+    }
+
+    public void pauseMenuClick()
+    {
+        pauseMenu.enabled = true;
     }
 }
