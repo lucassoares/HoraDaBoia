@@ -13,7 +13,7 @@ public class Move : MonoBehaviour
 	
 	void Update ()
     {
-        transform.Translate(speed * Time.deltaTime, 0, 0);
+        this.transform.Translate(speed * Time.deltaTime, 0, 0);
 	}
 
     /// <summary>

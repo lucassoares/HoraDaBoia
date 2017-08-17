@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 114576754424994624}
   - component: {fileID: 114733847225176704}
   - component: {fileID: 114879702095396628}
+  - component: {fileID: 95893680373095266}
   m_Layer: 0
   m_Name: Abobora 1
   m_TagString: Player
@@ -39,7 +40,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1989703635273218}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.353039, y: 5.3077817, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.75063616, y: 0.7506357, z: 2.5021188}
   m_Children: []
   m_Father: {fileID: 0}
@@ -80,6 +81,23 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.64
+--- !u!95 &95893680373095266
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1989703635273218}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 346292ae13cb036439fa13a0b6838d7a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114576754424994624
 MonoBehaviour:
   m_ObjectHideFlags: 1
