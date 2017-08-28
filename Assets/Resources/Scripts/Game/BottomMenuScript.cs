@@ -146,5 +146,6 @@ public class BottomMenuScript : MonoBehaviour
     public void pauseMenuClick()
     {
         pauseMenu.enabled = true;
+        Time.timeScale = 0;
     }
 }
