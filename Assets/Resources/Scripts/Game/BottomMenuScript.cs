@@ -40,7 +40,7 @@ public class BottomMenuScript : MonoBehaviour
         }
         else
         {
-            aboboraInferior.GetComponent<Button>().interactable = true;
+            //aboboraInferior.GetComponent<Button>().interactable = true;
         }
 
         if(Players.manas <= 5)
@@ -50,7 +50,7 @@ public class BottomMenuScript : MonoBehaviour
         }
         else
         {
-            brocolisInferior.GetComponent<Button>().interactable = true;
+            //brocolisInferior.GetComponent<Button>().interactable = true;
             cenouraInferior.GetComponent<Button>().interactable = true;
         }
     }

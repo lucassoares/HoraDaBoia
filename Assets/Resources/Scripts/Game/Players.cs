@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEngine.UI;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Players : MonoBehaviour
 {
@@ -11,6 +11,9 @@ public class Players : MonoBehaviour
     private float time;
     public Text manasText;
     public Text pontosText;
+    public Canvas victoria;
+    public Canvas derrota;
+
 
     void Start ()
     {
@@ -18,6 +21,9 @@ public class Players : MonoBehaviour
         manas = 0;
         time = 0;
         vida = 15;
+        victoria.enabled = false;
+        derrota.enabled = false;
+  
 	}
 	
 	void Update ()
@@ -30,5 +36,20 @@ public class Players : MonoBehaviour
             time = 0;
         }
         manasText.text = manas.ToString();
+
+        if(pontos >= 100)
+        {
+            victoria.enabled = true;
+        }
+        if(vida <= 0)
+        {
+            derrota.enabled = true;
+        }
+    }
+
+    public void BtnFechar()
+    {
+        derrota.enabled = false;
+        victoria.enabled = false;
     }
 }
